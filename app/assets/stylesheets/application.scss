@@ -1,0 +1,33 @@
+/*
+ *= require font-kit-rails/open-sans
+*/
+
+@import "bootstrap";
+@import "font-awesome";
+@import "col-helpers";
+@import "nav";
+@import "events";
+@import "tickets";
+
+body {
+  font-family: 'Open Sans';
+}
+.btn.btn-danger {
+  background-color: rgb(216, 87, 66);
+  border: 2px solid rgb(241, 112, 91);
+}
+
+.brand {
+  font-size: 30px;
+  color: white;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.brand:hover {
+  font-size: 30px;
+  color: white;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}

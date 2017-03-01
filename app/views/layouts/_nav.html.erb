@@ -1,0 +1,20 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="brand" href="<%= root_path %>">Tika</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <% if user_signed_in? %>
+          <p><%= link_to "Sign_out", destroy_user_session_path, :method => 'delete', class: "btn btn-outline-success my-2 my-sm-0" %></p>
+          <p><%= link_to "Create New Event", new_event_path, :method => 'get', class: "btn btn-outline-success my-2 my-sm-0" %></p>
+      <% else %>
+          <p><%= link_to "Sign Up", new_user_registration_path, :method => 'get', class: "btn btn-outline-success my-2 my-sm-0"  %></p>
+          <p><%= link_to "Sign_in", new_user_session_path, :method => 'get', class: "btn btn-outline-success my-2 my-sm-0"  %></p>
+      <% end %>
+    </form>
+  </div>
+</nav>

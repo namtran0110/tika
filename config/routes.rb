@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "registrations"}
+  get '/upcoming' => 'events#index'
   root 'events#index'
 
   resources :events do

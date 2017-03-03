@@ -1,21 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/macbookprorentina/RubymineProjects/tika/spec/controllers/events_controller_spec.rb": [
+      "/Users/macbookprorentina/RubymineProjects/tika/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
+        null,
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
         null,
         null,
         null
@@ -942,90 +938,8 @@
       "/Users/macbookprorentina/RubymineProjects/tika/app/helpers/tickets_helper.rb": [
         1,
         null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/app/controllers/events_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/spec/models/event_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/app/models/event.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/macbookprorentina/RubymineProjects/tika/spec/routes/incoming_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
       ]
     },
-    "timestamp": 1488448683
+    "timestamp": 1488513426
   }
 }

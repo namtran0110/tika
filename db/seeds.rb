@@ -7,7 +7,7 @@
   Region.create(name: r)
 end
 # Create Categories
-['Entertainment', 'Learning', 'Everything Else'].each do |c|
+['Entertainment', 'Learning', 'Historical', 'Startup', 'Developer'].each do |c|
   Category.create(name: c)
 end
 
@@ -25,6 +25,7 @@ e = Event.create({
   starts_at: DateTime.parse('Fri, 11 Mar 2016 7:00 AM+0700'),
   ends_at: DateTime.parse('Sun, 13 Mar 2016 3:00 PM+0700'),
   venue: dalat,
+  publish: 'Published',
   category: Category.find_by(name: 'Everything Else'),
   hero_image_url: 'https://media.ticketbox.vn/eventcover/2015/10/25/C6A1A5.jpg',
   extended_html_description: <<-DESC
@@ -51,6 +52,7 @@ dan_venue = Venue.create({
 e = Event.create({
   name: 'Cảm ơn Đời - Live Concert Đan Trường', 
   venue: dan_venue,
+  publish: 'Published',
   category: Category.find_by(name: 'Entertainment'),
   starts_at: DateTime.parse('Sat, 16 Jan 2016, 8:00 PM+0700'),
   ends_at: DateTime.parse('Sat, 16 Jan 2016, 10:30 PM+0700'),  
@@ -132,6 +134,7 @@ e = Event.create({
   starts_at: DateTime.parse('Thu, 24 Dec 2015, 8:00 PM+0700'),
   ends_at: DateTime.parse('Thu, 24 Dec 2015, 11:00 PM+0700'),
   venue: gap,
+  publish: 'Published',
   category: Category.find_by(name: 'Entertainment'),
   hero_image_url:'http://cdn.history.com/sites/2/2015/04/hith-father-christmas-lights-iStock_000029514386Large.jpg',
   extended_html_description: <<-DESC

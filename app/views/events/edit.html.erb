@@ -44,14 +44,15 @@
 
       <div class="field">
         <%= f.label :"Venue" %>
-       <input class="form-control" name="venue[name]">
+        <%= f.text_field :venue_id, class: 'form-control' %>
       </div>
+
       <div class="field">
         <%= f.label :"Publish" %>
         <%= f.select :publish, options_for_select(['Not Publish','Published'],['Published']) %>
       </div>
 
-      <div class="actions text-center">
+      <div class="actions">
         <%= f.submit class: 'btn btn-outline-success my-2 my-sm-0' %>
       </div>
   <% end %>

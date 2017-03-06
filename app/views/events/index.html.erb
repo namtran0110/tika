@@ -2,12 +2,19 @@
   <div class="container">
     <h2> Discover upcoming events </h2>
     <form>
-      <input type="text" class="form-control" name="search" placeholder="Search for events, shows, courses...">
+      <%= form_tag(events_path, method: :get, role: 'search') do %>
+          <div class="input-group">
+            <%= text_field_tag :term, params[:term], id: 'events_search', autocomplete: :on, placeholder: 'Search Event Here', class: 'form_control' %>
+          </div>
+          <div class="input-group-btn search-panel text-center">
+            <%= submit_tag 'Search', name: nil, class: 'search_button'%>
+          </div>
+      <% end %>
     </form>
   </div>
 </div>
 <div class="container-fluid events-list">
-    <% @events.upcoming.in_groups_of(2) do |g| %>
+    <% @events.to_a.in_groups_of(2) do |g| %>
       <div class="row">
         <% g.compact.each do |e| %>
             <%= render partial: 'card', locals: {event: e} %>

@@ -1,8 +1,13 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :mine]
 
   def index
-    @events = Event.all
+    search = params[:term].present? ? params[:term] : nil
+    @events = if search
+               Event.upcoming.search(search)
+              else
+                Event.upcoming
+              end
     if user_signed_in?
     else
       redirect_to new_user_session_path
@@ -16,6 +21,7 @@ class EventsController < ApplicationController
 
   def edit
     @category = Category.all
+    @venue = Venue.all
   end
 
   def create
@@ -30,6 +36,19 @@ class EventsController < ApplicationController
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def mine
+    load_user
+    @events = @user.events
+  end
+
+  def load_user
+    if params[:user_id]
+      @user = User.find params[:user_id]
+    else
+      @user = current_user
     end
   end
 
@@ -61,4 +80,5 @@ class EventsController < ApplicationController
   def venue_params
     params.require(:venue).permit(:name, :full_address)
   end
+
 end

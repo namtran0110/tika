@@ -10,4 +10,10 @@ RSpec.describe User, type: :model do
       expect(a.name).to eq "Nam"
     end
   end
+  describe "User.email" do
+    it "returns new user's email when created" do
+      a = User.new name: "Nam", password: "asd", email: "abc@gmail.com"
+      expect(a.email).to eq "abc@gmail.com"
+    end
+  end
 end

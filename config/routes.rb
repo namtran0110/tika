@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'events#index'
 
   resources :events do
+    get 'mine'
     resources :tickets
   end
   # The priority is based upon order of creation: first created -> highest priority.

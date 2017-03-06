@@ -37,6 +37,18 @@ RSpec.describe Event, type: :model do
       event = Event.new venue: venue
       expect(event.venue_name).to eq "GEM center"
     end
+    describe "#extended_html_description" do
+      it "returns description" do
+        event = Event.new extended_html_description: "description"
+        expect(event.extended_html_description).to eq "description"
+      end
+    end
+    describe "#category" do
+      it "returns category" do
+        event = Event.new category_id: 1
+        expect(event.category_id).to eq 1
+      end
+    end
   end
 end
 

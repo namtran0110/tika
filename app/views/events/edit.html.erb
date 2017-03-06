@@ -11,49 +11,50 @@
             </ul>
           </div>
       <% end %>
+      <div class="row">
+        <div class="field col-md-12">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
-      </div>
+        <div class="field col-md-6">
+          <%= f.label :"Start At" %>
+          <%= f.datetime_local_field :starts_at, class: 'form-control' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Start At" %>
-        <%= f.datetime_local_field :starts_at, class: 'form-control' %>
-      </div>
+        <div class="field col-md-6">
+          <%= f.label :"End At" %>
+          <%= f.datetime_local_field :ends_at, class: 'form-control' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"End At" %>
-        <%= f.datetime_local_field :ends_at, class: 'form-control' %>
-      </div>
+        <div class="field col-md-12">
+          <%= f.label :"Image Link" %>
+          <%= f.text_field :hero_image_url, class: 'form-control' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Image Link" %>
-        <%= f.text_field :hero_image_url, class: 'form-control' %>
-      </div>
+        <div class="field col-md-12">
+          <%= f.label :"Short Link" %>
+          <%= f.text_field :extended_html_description, class: 'form-control' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Short Link" %>
-        <%= f.text_field :extended_html_description, class: 'form-control' %>
-      </div>
+        <div class="field col-md-12">
+          <%= f.label :"Venue" %>
+          <%= f.select :venue_id, @venue.map { |f| [f.name, f.id] }, class: 'select_button' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Category" %>
-        <%= f.select :category_id, @category.map {|f| [f.name, f.id]}, class: 'form-control' %>
-      </div>
+        <div class="form-group col-md-6">
+          <%= f.label :"Category" %>
+          <%= f.select :category_id, @category.map { |f| [f.name, f.id] }, class: 'select_button' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Venue" %>
-        <%= f.text_field :venue_id, class: 'form-control' %>
-      </div>
+        <div class="form-group col-md-6">
+          <%= f.label :"Publish" %>
+          <%= f.select :publish, options_for_select(['Not Publish', 'Published'], ['Published']), class: ' select_button' %>
+        </div>
 
-      <div class="field">
-        <%= f.label :"Publish" %>
-        <%= f.select :publish, options_for_select(['Not Publish','Published'],['Published']) %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit class: 'btn btn-outline-success my-2 my-sm-0' %>
+        <div class="actions col-md-12 text-center">
+          <%= f.submit class: 'btn btn-outline-success my-2 my-sm-0' %>
+        </div>
       </div>
   <% end %>
 </div>

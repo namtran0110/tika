@@ -25,7 +25,7 @@
     <div class="col-md-11 col-md-offset-1">
       <table class="table">
         <th> Ticket Type</th>
-        <th> Unit Price</th>
+        <th> Price</th>
         <th> Quantity</th>
 
         <% @event.ticket_types.each do |type| %>
@@ -40,7 +40,7 @@
   </div>
   <div class="row">
     <div class="col-md-2 col-md-offset-5">
-      <button class="btn btn-success btn-lg btn-block"> Buy</button>
+      <%= submit_tag "Buy", class: 'btn btn-success btn-lg btn-block' %>
     </div>
     <div>
     </div>

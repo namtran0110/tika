@@ -12,7 +12,7 @@
                   </div>
 
                   <div class="col-md-6 price text-right">
-                    <%= number_to_currency(ticket_type.price, precision: 0) %>
+                    <%= number_to_currency(ticket_type.price, unit: 'VND ', precision: 0) %>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -54,6 +54,9 @@
             <% if @event.user_id == current_user.id %>
                 <div class="extended-description">
                   <%= link_to 'Edit', edit_event_path(@event) %>
+                </div>
+                <div class="extended-description">
+                  <%= link_to 'Create ticket type', new_event_ticket_type_path(@event) %>
                 </div>
             <% end %>
 

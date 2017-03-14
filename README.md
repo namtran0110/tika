@@ -11,8 +11,8 @@
 
 The following **required** functionality is complete:
 
-* [ ] Implement required user stories
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] Implement required user stories
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 The person with best test coverage will win a small present from the instructor :)
 
@@ -24,7 +24,7 @@ The person with best test coverage will win a small present from the instructor 
         * Implement `/upcoming` route test to go to 'events#index'
         * Implement `Event.upcoming` class method (with a test)
         * Implement `EventsController#index` action test
-* [ ] Users can search for events from the homepage.
+* [x] Users can search for events from the homepage.
 * [x] Users can click on an event to see details about the event.
 * [x] Users can click on "Book Now" to go to a page to purchase tickets.
 
@@ -33,19 +33,19 @@ The person with best test coverage will win a small present from the instructor 
 * [x] Each event can have multiple types of tickets, each with a different `price` and `max_quantity`.
 * [ ] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
 * [ ] Users cannot buy more tickets than the quantity available.
-* [ ] Users can only buy up to 10 of a ticket type at a time. Show a nice flash message.
+* [x] Users can only buy up to 10 of a ticket type at a time. Show a nice flash message.
 
 #### Users
 
 * [x] User can sign up by providing their email, password, and name.
 * [x] User can login using an email and password.
 * [x] Users can create events.
-* [ ] Users must click "publish event" before an event becomes viewable to other users.
+* [x] Users must click "publish event" before an event becomes viewable to other users.
     * **HINT**: use `published_at:datetime` and `Event.published` scope (class method)
     * Suggestions:
         * See [Add More RESTful Actions](http://guides.rubyonrails.org/routing.html#adding-more-restful-actions) to add a `publish` POST action (member type)
         * Write a test to make sure only an event creator can publish an event
-* [ ] Users can create ticket types for that event.
+* [x] Users can create ticket types for that event.
     * **HINT**: make sure you understand what a ticket type is. Ask if not clear.
 * [x] Users can create venues.
 * [x] An event must have at least one `ticket_type` defined before it can be published.

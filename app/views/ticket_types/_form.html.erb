@@ -1,0 +1,25 @@
+<div class="container">
+  <%= form_for([@ticket_type.event, @ticket_type]) do |f| %>
+      <% if @ticket_type.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@ticket_type.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+            <ul>
+              <% @ticket_type.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <div class="field">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      Price: <%= f.number_field :price, class: 'form-control' %>
+      Max Quantity: <%= f.number_field :max_quantity, class: 'form-control' %>
+      <div class="text-center">
+        <%= f.submit class: 'btn btn-outline-success my-2 my-sm-0 ' %>
+      </div>
+  <% end %>
+</div>
